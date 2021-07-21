@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-    <img src="https://viacep.com.br/estatico/images/viacep.png.pagespeed.ce.I80LiA6qpr.png" alt="Logo" width="280" height="60">
+    <img src="https://raw.githubusercontent.com/guibranco/viacep/master/logo.png" alt="Logo" width="280" height="60">
 
   <h2 align="center">Desafio Node.js - Via CEP</h2>
 </p>
