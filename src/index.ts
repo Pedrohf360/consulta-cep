@@ -16,5 +16,7 @@ app.use(routes);
 const port = env.PORT;
 
 server.listen(port, () => {
-    console.log(`Live at http://localhost:${port}/`);
+    console.log('##################################');
+    console.log(`Listening at http://localhost:${port}/`);
+    console.log('##################################');
 });

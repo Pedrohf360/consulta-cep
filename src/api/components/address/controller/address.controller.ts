@@ -14,6 +14,10 @@ export default class AddressController {
 
         const cepDataFound: any = await addressService.findAddressByCEP(cepNumber);
 
+        if (cepDataFound.data.erro) {
+            return response.status(404).json({ error: 'O número do CEP não foi encontrado' });
+        }
+
         return response.status(cepDataFound.status).json(cepDataFound.data);
     }
 }
