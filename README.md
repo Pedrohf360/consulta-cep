@@ -30,26 +30,36 @@ Nesta seção, serão listadas as tecnologias utilizadas e suas respectivas vers
 3) Execute ``npm install`` na raíz do projeto (onde se encontra o arquivo package.json);
 4) Execute ``npm run start:dev``;
 5) Pronto! A API está em funcionamento :D
+
+- Observações:
+
+    - Documentação Swagger: http://localhost:3000/api-docs
+    - Para executar as rotinas de teste, utilize ``npm test``
 ## Estrutura
 
 ```
 .
 └── src/
     ├── api/
-    │   └── components/
-    │       └── address/
-    │           ├── controller/
-    │           │   └── address.controller.ts
-    │           ├── interfaces/
-    │           │   └── address.interface.ts
-    │           └── routes/
-    │               └── address.routes.ts
+    │   ├── components/
+    │   │   └── address/
+    │   │       ├── controller/
+    │   │       │   └── address.controller.ts
+    │   │       ├── interfaces/
+    │   │       │   └── address.interface.ts
+    │   │       └── routes/
+    │   │           └── address.routes.ts
+    │   ├── routes.ts
+    │   └── server.ts
     ├── config/
     │   └── globals.ts
     ├── services/
     │   └── via-cep.ts
     ├── shared/
     │   └── utils.ts
+    ├── tests/
+    │   └── integration/
+    │       └── address.int.test.js
     ├── index.ts
-    └── routes.ts
+    └── swagger.json
 ```
