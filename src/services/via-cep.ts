@@ -2,7 +2,7 @@ import axios from 'axios';
 import IAddress from '../api/components/address/interfaces/address.interface';
 
 const api = axios.create({
-    baseURL: 'https://viacep.com.br/ws/',
+    baseURL: 'https://viacep.com.br/ws/'
 });
 
 export class ViaCepService {
