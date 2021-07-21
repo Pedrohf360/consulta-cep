@@ -1,0 +1,83 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Consulta CEP",
+        "description": "Consulta CEP - Documentação da Web API"
+    },
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "host": "localhost:3000",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/api/address/{cepNumber}": {
+            "parameters": [
+                {
+                    "name": "cepNumber",
+                    "in": "path",
+                    "required": true,
+                    "description": "Número do CEP",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Address"
+                ],
+                "summary": "Retorna o Endereço correspondente ao CEP fornecido",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Falha. CEP não encontrado."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Address": {
+            "type": "object",
+            "properties": {
+                "cep": {
+                    "type": "string"
+                },
+                "logradouro": {
+                    "type": "string"
+                },
+                "complemento": {
+                    "type": "string"
+                },
+                "bairro": {
+                    "type": "string"
+                },
+                "localidade": {
+                    "type": "string"
+                },
+                "uf": {
+                    "type": "string"
+                },
+                "ibge": {
+                    "type": "string"
+                },
+                "gia": {
+                    "type": "string"
+                },
+                "ddd": {
+                    "type": "string"
+                },
+                "siafi": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
