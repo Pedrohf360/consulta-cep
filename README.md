@@ -13,8 +13,6 @@
 * [Estrutura](#estrutura)
 ## Sobre
 
-Live Demo: https://pedrohf360.github.io/starships-stop-counter/
-
 O objetivo principal desta Web API é fornecer uma rota para consulta de endereços, por meio de um CEP que deve ser informado, conforme especificado a seguir.
 
 ## Requisitos
