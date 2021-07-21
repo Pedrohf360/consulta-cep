@@ -1,9 +1,4 @@
 const isValidCEP = (cepNumber: string) => {
-    if (!cepNumber) {
-        return false;
-    }
-
-    cepNumber = cepNumber.replace(/\D/g, '');
 
     if (!cepNumber) {
         return false;
