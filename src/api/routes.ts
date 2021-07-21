@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import addressMiddleware from './api/components/address/routes/address.routes';
+import addressMiddleware from './components/address/routes/address.routes';
 
 const routes = Router();
 
