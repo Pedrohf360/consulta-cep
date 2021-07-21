@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { ViaCepService } from '../../../../services/via-cep';
-import Address from '../interfaces/address.interface';
 
 export default class AddressController {
 
@@ -13,8 +12,8 @@ export default class AddressController {
 
         const addressService = new ViaCepService();
 
-        const cepDataFound: Address = await addressService.findAddressByCEP(cepNumber);
+        const cepDataFound: any = await addressService.findAddressByCEP(cepNumber);
 
-        return response.json(cepDataFound);
+        return response.status(cepDataFound.status).json(cepDataFound.data);
     }
 }

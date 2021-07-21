@@ -2,7 +2,7 @@ import axios from 'axios';
 import IAddress from '../api/components/address/interfaces/address.interface';
 
 const api = axios.create({
-    baseURL: 'viacep.com.br/ws/',
+    baseURL: 'https://viacep.com.br/ws/',
 });
 
 export class ViaCepService {
@@ -11,7 +11,9 @@ export class ViaCepService {
         return api.get(`${subRoute}/${returnType}`);
     }
 
-    public findAddressByCEP(cepNumber: string): Promise<IAddress> {
-        return this.callApi(`${cepNumber}`);
+    public async findAddressByCEP(cepNumber: string): Promise<IAddress> {
+        const data: IAddress = await this.callApi(`${cepNumber}`);
+
+        return data;
     }
 }
